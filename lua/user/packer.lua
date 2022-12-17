@@ -45,24 +45,30 @@ return require("packer").startup(function(use)
 
 	-- Language server protocol related
 	use({
-		"williamboman/mason.nvim",
-		"williamboman/mason-lspconfig.nvim",
-		"neovim/nvim-lspconfig",
-	})
+		"VonHeikemen/lsp-zero.nvim",
+		requires = {
+			-- LSP Support
+			{ "neovim/nvim-lspconfig" },
+			{ "williamboman/mason.nvim" },
+			{ "williamboman/mason-lspconfig.nvim" },
 
-	-- Fuzzy searching
-	use({
-		"nvim-telescope/telescope.nvim",
-		tag = "0.1.0",
-		requires = { "nvim-lua/plenary.nvim" },
+			-- Autocompletion
+			{ "hrsh7th/nvim-cmp" },
+			{ "hrsh7th/cmp-buffer" },
+			{ "hrsh7th/cmp-path" },
+			{ "saadparwaiz1/cmp_luasnip" },
+			{ "hrsh7th/cmp-nvim-lsp" },
+			{ "hrsh7th/cmp-nvim-lua" },
+
+			-- Snippets
+			{ "L3MON4D3/LuaSnip" },
+			-- {'rafamadriz/friendly-snippets'},
+		},
 	})
-	use("nvim-lua/plenary.nvim")
-	use("nvim-telescope/telescope-file-browser.nvim")
 
 	-- File explorer tree
 	use({
 		"nvim-tree/nvim-tree.lua",
-		-- commit = "7282f7de8aedf861fe0162a559fc2b214383c51c",
 		requires = { "nvim-tree/nvim-web-devicons" },
 	})
 	use("nvim-tree/nvim-web-devicons")
@@ -71,10 +77,19 @@ return require("packer").startup(function(use)
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		-- Lock to commit as latest is buggy
-		commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac",
+		-- commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac",
+		run = ":TSUpdate",
 	})
 
-	-- Theme and colors
+	-- Fuzzy searching
+	use({
+		"nvim-telescope/telescope.nvim",
+		tag = "0.1.0",
+		requires = { "nvim-lua/plenary.nvim" },
+	})
+	use("nvim-telescope/telescope-file-browser.nvim")
+
+	-- Theme and statusbar
 	use("EdenEast/nightfox.nvim")
 	use("nvim-lualine/lualine.nvim")
 
@@ -96,9 +111,6 @@ return require("packer").startup(function(use)
 
 	-- Smooth scrolling
 	use("karb94/neoscroll.nvim")
-
-	-- Snippet engine
-	use("L3MON4D3/LuaSnip")
 
 	-- Show git change (change, delete, add) signs in vim sign column
 	use("lewis6991/gitsigns.nvim")
