@@ -1,5 +1,5 @@
 local opts = { noremap = true, silent = true }
-local term_opts = { silent = true }
+-- local term_opts = { silent = true }
 
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
@@ -25,8 +25,8 @@ vim.keymap.set("n", "gh", vim.diagnostic.open_float, { noremap = true, silent = 
 -- Keep cursor centered
 keymap("n", "<C-d>", "<C-d>zz", opts)
 keymap("n", "<C-u>", "<C-u>zz", opts)
-keymap("n", "n", "nzzzv", opts)
-keymap("n", "N", "Nzzzv", opts)
+-- keymap("n", "n", "nzzzv", opts)
+-- keymap("n", "N", "Nzzzv", opts)
 
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
