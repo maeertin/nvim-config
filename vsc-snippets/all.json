@@ -110,8 +110,8 @@
     "prefix": "rus",
     "body": ["const [$1, set${1/(.*)/${1:/capitalize}/}] = React.useState($2)"]
   },
-  "Create React Story": {
-    "prefix": "reactStory",
+  "Storybook Component Story Format 2": {
+    "prefix": "csf2",
     "body": [
       "import * as React from 'react'",
       "import ${1:MyComponent} from './${1:MyComponent}'",
@@ -126,6 +126,22 @@
       "export const Default = Template.bind({})",
       "Default.args = {",
       "  children: 'Just some children',",
+      "}",
+      ""
+    ]
+  },
+  "Storybook Component Story Format 3": {
+    "prefix": "csf3",
+    "body": [
+      "import ${1:MyComponent} from './${1:MyComponent}'",
+      "",
+      "export default {",
+      "  component: ${1:MyComponent},",
+      "}",
+      "",
+      "export const Default = {",
+      "  args: {",
+      "    children: 'Just some children',",
       "}",
       ""
     ]
@@ -211,6 +227,16 @@
       "",
       "export default ${1:${TM_FILENAME_BASE}}",
       ""
+    ]
+  },
+  "Sanity define field": {
+    "prefix": "sdf",
+    "body": [
+      "defineField({",
+      "  name: '$1',",
+      "  title: '${1/(.*)/${1:/capitalize}/}',",
+      "  type: '$2',$3",
+      "}),$4"
     ]
   },
   "propTypes": {
