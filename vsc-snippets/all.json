@@ -234,7 +234,7 @@
     "body": [
       "import { defineField, defineType } from 'sanity'",
       "",
-      "defineType({",
+      "export default defineType({",
       "  name: '$1',",
       "  title: '${1/(.*)/${1:/capitalize}/}',",
       "  type: 'object',",
