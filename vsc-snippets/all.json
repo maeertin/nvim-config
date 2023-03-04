@@ -229,6 +229,21 @@
       ""
     ]
   },
+  "Sanity define type": {
+    "prefix": "sdt",
+    "body": [
+      "import { defineField, defineType } from 'sanity'",
+      "",
+      "defineType({",
+      "  name: '$1',",
+      "  title: '${1/(.*)/${1:/capitalize}/}',",
+      "  type: 'object',",
+      "  fields: [",
+      "    $2",
+      "  ],",
+      "})"
+    ]
+  },
   "Sanity define field": {
     "prefix": "sdf",
     "body": [
