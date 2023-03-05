@@ -93,6 +93,9 @@ return require("packer").startup(function(use)
 	use("EdenEast/nightfox.nvim")
 	use("nvim-lualine/lualine.nvim")
 
+	-- Clipboard manager neovim plugin with telescope integration
+	use("AckslD/nvim-neoclip.lua")
+
 	-- A snazzy bufferline
 	use({
 		"akinsho/bufferline.nvim",

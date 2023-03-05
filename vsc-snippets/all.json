@@ -142,6 +142,7 @@
       "export const Default = {",
       "  args: {",
       "    children: 'Just some children',",
+      "  },",
       "}",
       ""
     ]
@@ -230,7 +231,7 @@
     ]
   },
   "Sanity define type": {
-    "prefix": "sdt",
+    "prefix": "dt",
     "body": [
       "import { defineField, defineType } from 'sanity'",
       "",
@@ -245,7 +246,7 @@
     ]
   },
   "Sanity define field": {
-    "prefix": "sdf",
+    "prefix": "df",
     "body": [
       "defineField({",
       "  name: '$1',",
