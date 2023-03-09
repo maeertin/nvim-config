@@ -1,5 +1,5 @@
 local options = {
-	clipboard = "unnamedplus", -- Allows neovim to access the system clipboard
+	-- clipboard = "unnamedplus", -- Allows neovim to access the system clipboard
 	colorcolumn = "80,100", -- Set rulers at 80 and 100 characters
 	expandtab = true, -- Convert tabs to spaces
 	fileencoding = "utf-8", -- The encoding written to a file
