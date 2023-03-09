@@ -233,11 +233,9 @@
   "Sanity define type": {
     "prefix": "dt",
     "body": [
-      "import { defineField, defineType } from 'sanity'",
-      "",
-      "export default defineType({",
-      "  name: '$1',",
+      "defineType({",
       "  title: '${1/(.*)/${1:/capitalize}/}',",
+      "  name: '$1',",
       "  type: 'object',",
       "  fields: [",
       "    $2",
@@ -249,8 +247,8 @@
     "prefix": "df",
     "body": [
       "defineField({",
-      "  name: '$1',",
       "  title: '${1/(.*)/${1:/capitalize}/}',",
+      "  name: '$1',",
       "  type: '$2',$3",
       "}),$4"
     ]
