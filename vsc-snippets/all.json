@@ -35,6 +35,10 @@
     "prefix": "inoa",
     "body": "import { $2 } from '@noaignite/$1'"
   },
+  "Import lingui": {
+    "prefix": "ilin",
+    "body": "import { t } from '@lingui/macro'"
+  },
   "Export default": {
     "prefix": "ee",
     "body": ["export { default } from './${1:Component}'"]
